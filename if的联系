@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+/*女方家长要嫁女儿，当然要看条件
+高：180CM以上；富：财富1KW以上;帅：是。
+如果以上三个条件都满足，则：“我一定要加给他！！！”
+如果三个条件有为真的情况，则：“嫁吧，比上不足比下有余。”
+如果三个条件都不满足，则：“不嫁！”*/
+ class IfExp {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("请输入您的身高：（CM）");
+        int height = scanner.nextInt();
+        System.out.println("请输入您的财富：（千万）");
+        double wealth = scanner.nextDouble();
+        System.out.println("请输入您是否帅：（true or false）");
+        Boolean handsome = scanner.nextBoolean();
+        //方法一：
+        if (height >= 180 && wealth >= 1 && handsome == true) {
+            System.out.println("我一定要加给他！！！");
+        } else if (height >= 180 || wealth >= 1 || handsome == true) {
+            System.out.println("嫁吧，比上不足比下有余");
+        } else {
+            System.out.println("不嫁！");
+        }
+    }
+}
