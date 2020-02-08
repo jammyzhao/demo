@@ -1,0 +1,16 @@
+//遍历100以内的偶数,并且计算出偶数之和与偶数个数
+class Test {
+    public static void main(String[] args) {
+        int sum = 0;
+        int count = 0;
+        for (int i = 0; i < 101; i++) {
+            if (i % 2 == 0) {
+                System.out.println(i);
+                sum += i;
+                count++;
+            }
+        }
+        System.out.println(sum);
+        System.out.println(count);
+    }
+}
