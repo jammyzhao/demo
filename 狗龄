@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+//狗的前两年每年相当于人类的10.5岁，之后每增加一年就增加四岁。那么5岁的狗相当于人的多少岁
+class DogAge {
+    public static void main(String[] args) {
+        Scanner scanner =  new Scanner (System.in);
+        System.out.println("请输入您的狗狗年龄");
+        int dogage = scanner.nextInt();
+
+        if (dogage > 0 && dogage <= 2){
+            System.out.println("您的狗狗今年相当于人的年龄：  " + dogage * 10.5);
+        }else if (dogage >2){
+            System.out.println("您的狗狗今年相当于人的年龄：  " + (2*10.5 +((dogage - 2) *4)));
+        }else{
+            System.out.println("您输入的狗狗年龄有误，请重新输入！");
+        }
+    }
+
+}
