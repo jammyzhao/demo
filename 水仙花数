@@ -1,0 +1,13 @@
+public class ShuiXianHua {
+    //水仙花数，各个位立方和为该数  153
+    public static void main(String[] args) {
+        for(int i = 100;i <= 999;i++){
+            int count = 0;
+            if (((i/100)*(i/100)*(i/100) + (i%100/10)*(i%100/10)*(i%100/10) + (i%10)*(i%10)*(i%10)) == i){
+                System.out.println(i);
+                count++;
+            }
+
+        }
+    }
+}
