@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+//从键盘接收任意整数，计算输入正数负数各多少。当输入为0时停止。
+class While {
+    public static void main(String[] args) {
+        Scanner sca = new Scanner(System.in);
+        int pra = 0;
+        int nagetative = 0;
+        while (true){
+            int i = sca.nextInt();
+            if (i > 0){
+                pra++;
+            }else if (i < 0)
+            {
+                nagetative++;
+            }else{
+                break;
+            }
+        }
+        System.out.println("正数的个数为"+pra);
+        System.out.println("负数的个数为"+nagetative);
+    }
+
+}
