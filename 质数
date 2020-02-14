@@ -1,0 +1,17 @@
+//100以内的质数：除了1和它本身以外不能被其他数整除
+public class PrimeNumber {
+    public static void main(String[] args) {
+        for(int i = 2;i <= 100;i++){
+            boolean isFlag = true;
+            for(int j = 2;j < i;j++) {
+                if (i % j == 0){
+                     isFlag = false;
+                     break;
+                }
+            }
+            if (isFlag == true )
+                System.out.println(i);
+        }
+
+    }
+}
