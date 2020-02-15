@@ -1,0 +1,38 @@
+import java.util.Scanner;
+//从键盘读入学生成绩，找出最高分，并输出学生成绩等级
+// 成绩>=最高分-10；等级为A其余为等级D
+ class Array {
+    public static void main(String[] args) {
+        //使用scanner，读取学生个数
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("请输入学生个数：");
+          int number = scanner.nextInt();
+          //创建数组，存储学生成绩，动态初始化
+          int[] scores = new int[number];
+          //给数组中的元素赋值获取数组中元素最大值
+        System.out.println("请输入"+number+"个学生成绩");
+        int maxscores = 0;
+           for(int i = 0;i <scores.length;i++){
+               scores[i] = scanner.nextInt();
+               if (maxscores < scores[i]){
+                   maxscores = scores[i];
+               }
+           }
+
+        // 根据每个学生与最高的差值并输出等级和成绩
+        char level = 0;
+           for (int i = 0;i<scores.length;i++) {
+               if (maxscores - scores[i] <= 10) {
+                   level = 'A';
+               } else if (maxscores - scores[i] <= 20) {
+                   level = 'B';
+               } else if (maxscores - scores[i] <= 30) {
+                   level = 'C';
+               } else {
+                   level = 'D';
+               }
+
+               System.out.println("studend" + i + "score is" + scores[i] + ",gread is" + level);
+           }
+    }
+}
