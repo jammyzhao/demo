@@ -1,0 +1,19 @@
+
+public class Array {
+  //数组元素的反转
+  public static void main(String[] args) {
+      String[]arr = {"JJ","DD","MM","BB","GG","AA"};
+       for(int i= 0;i<arr.length;i++){
+           System.out.print(arr[i]+"\t");
+       }
+       System.out.println("\n"+"以上为原数组，以下为反转数组");
+       for(int i = 0;i<arr.length/2;i++){
+           String temp = arr[i];
+           arr[i] = arr[arr.length-i-1];
+           arr[arr.length-i-1] = temp;
+       }
+       for(int i = 0;i<arr.length;i++){
+           System.out.print(arr[i]+"\t");
+       }
+  }
+}
