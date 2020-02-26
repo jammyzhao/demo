@@ -1,0 +1,16 @@
+public class Recur {
+    //用递归调用算前n项和
+    public static void main(String[] args) {
+     Recur test = new Recur();
+        //int sum = test.getSum(20);
+        //System.out.println(sum);
+        System.out.println(test.getSum(100));
+    }
+    public int getSum(int n){
+        if (n == 1){
+            return 1;
+        }else{
+            return n + getSum(n - 1);
+        }
+    }
+}
