@@ -1,0 +1,26 @@
+public class Person {
+    private int age;
+
+    public void setAge(int a) {
+        if (a < 0 || a > 130) {
+            throw new RuntimeException("有误");
+        } else {
+            age = a;
+        }
+    }
+        public int getAge( ){
+            return age;
+        }
+}
+
+
+public class PersonTest {
+    public static void main(String[] args) {
+        Person p1 = new Person();
+       // PersonTest p1 = new PersonTest();
+        p1.setAge(12);
+        System.out.println(p1.getAge( ));
+    }
+
+}
+
