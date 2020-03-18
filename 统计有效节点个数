@@ -1,0 +1,20 @@
+class SingleLinkedList{
+    private HeroNode head = new HeroNode(0,"","");
+
+    public HeroNode getHead() {
+        return head;
+    }
+
+    public static int getlength(HeroNode head) {
+    if (head.next == null) {
+        return 0;
+    }
+    int length = 0;
+    HeroNode cur = head.next;
+    whole(cur != null) {
+        length++;
+        cur = cur.next;
+    }
+    return length;
+  }
+}
