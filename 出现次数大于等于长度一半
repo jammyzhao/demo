@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class 出现次数大于等于长度一半 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("请输入个数n：");
+        int n = scan.nextInt();
+        System.out.println("请输入数组：");
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = scan.nextInt();
+        }
+        int count = 0;
+        int flage = n / 2;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - 1 - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = 0;
+                    temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        for (int i = 0; i < n; i++) {
+            //System.out.println("冒泡排序后的数组：" );
+            System.out.print(arr[i] + "\t");
+        }
+        System.out.println();
+        //计算次数：
+        for (int i = 0; i < n - 1; i++) {
+            if (arr[i] == arr[i + 1]) {
+                count++;
+
+                if (count >= flage) {
+                    System.out.println(arr[i]);
+                }
+            }
+        }
+    }
+}
