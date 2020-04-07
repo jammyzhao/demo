@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class 最小公倍数 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("请输入两个数：");
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+        if (a > b){
+            int temp = 0;
+            temp = a;
+            a = b;
+            b = temp;
+        }
+        for (int i= a;i>0;i--){
+            if (b%i==0 && a%i ==0){
+              //  System.out.println("最大公因数为："+i);
+                System.out.println("最小公倍数为: "+(a*b)/i);
+                break;
+            }
+
+        }
+    }
+}
