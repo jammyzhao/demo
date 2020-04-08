@@ -1,0 +1,21 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class 输出逆序字符串 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("请输入字符数字串：");
+        String str = scan.nextLine();
+        char[] char1= str.toCharArray();//将字符串转换为字符数组
+        int length = char1.length;
+        for(int i = 0;i<length/2; i++){
+            int temp = 0;
+            temp = char1[i];
+            char1[i] = char1[length-1-i];
+            char1[ length-1-i]= (char) temp;
+        }
+        for (int i = 0;i< length;i++){
+            System.out.print(char1[i]);
+        }
+    }
+}
