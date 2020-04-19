@@ -1,0 +1,15 @@
+public class 百万富翁问题 {
+    public static void main(String[] args) {
+        int sum1 = 0;//富翁共拿出的钱
+        int sum2 = 1;//贫民拿出的钱
+        int temp = 1;
+        for (int i =2;i<= 30;i++){
+            temp = 2*temp;
+            sum2 = sum2+temp;
+        }
+        for (int i = 1;i<=30;i++){
+            sum1 = sum1 + 10;
+        }
+        System.out.println(sum1+" "+sum2);
+    }
+}
