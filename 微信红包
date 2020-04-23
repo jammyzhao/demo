@@ -1,0 +1,24 @@
+import java.util.Arrays;
+
+public class Gift {
+    public int getValue(int[] gifts, int n) {
+        int count = 0;
+        int flag = gifts[n/2];
+        Arrays.sort(gifts);
+//        for(int i = 0;i<n-1;i++){
+//            for(int j = 0;j < n-1-i;j++){
+//                if(gifts[j]>gifts[j+1]){
+//                    int temp ;
+//                         temp = gifts[j];
+//                     gifts[j] = gifts[j+1];
+//                    gifts[j+1] = temp;
+//                }
+//            }
+//        }
+        for(int i = 0;i<n;i++) {
+            if (gifts[i] == flag) {
+                count++;
+            }
+        }
+        return count <= n/2 ? 0:flag;
+    }
