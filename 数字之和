@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class 数字之和 {
+    public static void main(String[] args) {
+        Scanner sca = new Scanner(System.in);
+        int num = sca.nextInt();
+        int pingfang = num *num;
+        int sum1 = 0;
+        int sum2 = 0;
+       while(num > 0){
+           sum1 += num %10;
+            num = num / 10;
+            }
+       while(pingfang >0){
+           sum2 += pingfang % 10;
+           pingfang = pingfang /10;
+       }
+        System.out.println(sum1+" "+sum2);
+    }
+}
