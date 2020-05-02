@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class 守形数 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int m = n * n;
+
+        if ((n<10 &&(m - n) % 10 == 0) || (n >= 10 && (m-n)%100 ==0)) {
+            System.out.println("Yes!");
+        }else{
+            System.out.println("No!");
+        }
+ //        while (n > 0) {
+//            if (n % 10 == m % 10) {
+//        n = n / 10;
+//        m = m / 10;
+//    }else {
+//        System.out.println("No!");
+//        break;
+//    }
+//        if(n<10){
+//            System.out.println("Yes!");
+//        }
+//    }
+
+    }
+}
