@@ -1,0 +1,22 @@
+import java.util.Scanner;
+import static java.lang.StrictMath.acos;
+
+public class 球的半径和体积 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double x0 = scanner.nextFloat();
+        double y0 = scanner.nextFloat();
+        double z0 = scanner.nextFloat();
+        double x  = scanner.nextFloat();
+        double y = scanner.nextFloat();
+        double z = scanner.nextFloat();
+        double rr = (x-x0)*(x-x0)+(y-y0)*(y-y0)+(z-z0)*(z-z0);
+        double r = Math.sqrt(rr);
+        double s = (4*acos(-1)*r*r*r)/3;
+        System.out.printf("%.3f",r);         //printf是按照指定格式输出的语句
+        System.out.print(" ");
+        System.out.printf("%.3f",s);
+//        System.out.print(String.format("%.3f",r)+" ");
+//        System.out.print(String.format("%.3f",s));
+    }
+}
