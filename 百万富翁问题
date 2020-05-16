@@ -1,0 +1,13 @@
+public class 百万富翁问题 {
+    public static void main(String[] args) {
+       int sum1 = 10;
+       int sum2 = 1;
+       int temp = 1;
+       for(int i = 2;i<31;i++){
+          temp = 2*temp;
+           sum2 = sum2 + temp;
+       }
+        System.out.println(30*sum1+" "+sum2);
+    }
+}
+
